@@ -94,6 +94,6 @@ $ java -cp HBaseTableScanner.jar HBaseTableScanner -zkQuorum ***** -t SYSTEM:CAT
 .
 99: keyvalues={...}
 ---
-Total tables: 100
+Total rows: 100
 Master address: *****:16000
 ```
