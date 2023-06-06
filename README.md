@@ -14,6 +14,7 @@ HBase client to list and scan tables.
 - Initial release
 - List:
   - Support for table name pattern as argument: `-l,--list`
+    - List all tables if no argument is provided 
   - Display table names with the option to also show descriptors: `-d,--descriptors`
 - Scan:
   - Support for row limit output: `--limit` (default: 100)
