@@ -65,3 +65,34 @@ usage: HBaseTableScanner [-b <arg>] [-c] [-d] [-h] [-l <arg>] [--limit <arg>]
     --zkQuorum <arg>    Zookeeper quorum (default: localhost)
     --znode <arg>       HBase znode (default: /hbase)
 ```
+
+## Sample Output
+### List `SYSTEM` tables
+```
+$ java -cp HBaseTableScanner.jar HBaseTableScanner -zkQuorum ***** -l "SYSTEM:.*"
+
+SYSTEM:CATALOG
+SYSTEM:CHILD_LINK
+SYSTEM:FUNCTION
+SYSTEM:LOG
+SYSTEM:MUTEX
+SYSTEM:SEQUENCE
+SYSTEM:STATS
+SYSTEM:TASK
+---
+Total tables: 8
+Master address: *****:16000
+```
+
+### Scan table
+```
+$ java -cp HBaseTableScanner.jar HBaseTableScanner -zkQuorum ***** -t SYSTEM:CATALOG
+0: keyvalues={...}
+.
+.
+.
+99: keyvalues={...}
+---
+Total tables: 100
+Master address: *****:16000
+```
