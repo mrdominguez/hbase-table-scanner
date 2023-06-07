@@ -186,7 +186,7 @@ public class HBaseTableScanner {
 					if ( batchSize != null ) scan.setBatch(Integer.parseInt(batchSize));
 					if ( lastRow != null ) {
 						byte[] startRow = Bytes.add(lastRow, POSTFIX);
-						System.out.println("start row: " + Bytes.toStringBinary(startRow));
+						System.out.println("Start row: " + Bytes.toStringBinary(startRow));
 						scan.setStartRow(startRow);
 					}
 					ResultScanner scanner = table.getScanner(scan);
