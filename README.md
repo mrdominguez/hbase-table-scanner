@@ -21,6 +21,8 @@ HBase client to list and scan tables.
   - Support for batch size: `-b,--batchSize`
   - Output cells: `-c,--cell`
 
+_TODO: Add Kerberos support_
+
 ## Compilation and Usage
 This is the list of JAR files I used to compile and test the code:
 
