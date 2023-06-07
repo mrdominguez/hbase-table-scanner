@@ -23,6 +23,19 @@ HBase client to list and scan tables.
 
 _TODO: Add Kerberos support_
 
+## Custom Timeouts and Retries
+Add the following settings to the code:
+```
+conf.set("hbase.rpc.timeout", "10000");
+conf.set("hbase.client.scanner.timeout.period", "10000");
+conf.set("hbase.cells.scanned.per.heartbeat.check", "10000");
+conf.set("hbase.client.retries.number", "2");
+conf.set("hbase.client.pause", "1000");
+conf.set("zookeeper.session.timeout", "10000");
+conf.set("zookeeper.recovery.retry", "1");
+
+```
+
 ## Compilation and Usage
 This is the list of JAR files I used to compile and test the code:
 
@@ -52,7 +65,6 @@ stax2-api-4.2.1.jar
 woodstox-core-5.4.0.jar
 zookeeper-3.5.10.jar
 ```
-
 ```
 $ javac -cp *:. HBaseTableScanner.java && java -cp *:. HBaseTableScanner -h
 
