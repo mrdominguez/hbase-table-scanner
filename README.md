@@ -26,14 +26,13 @@ _TODO: Add Kerberos support_
 ## Custom Timeouts and Retries
 Add the following settings to the code:
 ```
-conf.set("hbase.rpc.timeout", "10000");
-conf.set("hbase.client.scanner.timeout.period", "10000");
 conf.set("hbase.cells.scanned.per.heartbeat.check", "10000");
-conf.set("hbase.client.retries.number", "2");
 conf.set("hbase.client.pause", "1000");
-conf.set("zookeeper.session.timeout", "10000");
+conf.set("hbase.client.retries.number", "2");
+conf.set("hbase.client.scanner.timeout.period", "10000");
+conf.set("hbase.rpc.timeout", "10000");
 conf.set("zookeeper.recovery.retry", "1");
-
+conf.set("zookeeper.session.timeout", "10000");
 ```
 
 ## Compilation and Usage
