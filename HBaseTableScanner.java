@@ -129,6 +129,14 @@ public class HBaseTableScanner {
 		conf.set("hbase.zookeeper.quorum", zkQuorum);
 		conf.set("hbase.zookeeper.property.clientPort", zkPort);
 		conf.set("zookeeper.znode.parent", znode);
+		// timeout and retry parameters
+		conf.set("hbase.cells.scanned.per.heartbeat.check", "10000");
+		conf.set("hbase.client.pause", "1000");
+		conf.set("hbase.client.retries.number", "2");
+		conf.set("hbase.client.scanner.timeout.period", "10000");
+		conf.set("hbase.rpc.timeout", "10000");
+		conf.set("zookeeper.recovery.retry", "1");
+		conf.set("zookeeper.session.timeout", "10000");
 
 		if ( tableName == null && list == null ) {
 			System.out.println("Missing required option: -l,--list | -t,--table");
