@@ -24,7 +24,7 @@ HBase client to list and scan tables.
 _TODO: Add Kerberos support_
 
 ## Custom Timeouts and Retries
-Add the following settings to the code:
+Update the following settings:
 ```
 conf.set("hbase.cells.scanned.per.heartbeat.check", "10000");
 conf.set("hbase.client.pause", "1000");
@@ -37,7 +37,6 @@ conf.set("zookeeper.session.timeout", "10000");
 
 ## Compilation and Usage
 This is the list of JAR files I used to compile and test the code:
-
 ```
 commons-cli-1.3.jar
 commons-codec-1.15.jar
