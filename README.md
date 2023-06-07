@@ -19,6 +19,7 @@ HBase client to list and scan tables.
 - Scan:
   - Support for row limit output: `--limit` (default: 100)
   - Support for batch size: `-b,--batchSize`
+  - Output cells: `-c,--cell`
 
 ## Compilation and Usage
 This is the list of JAR files I used to compile and test the code:
