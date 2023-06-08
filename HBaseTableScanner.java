@@ -51,7 +51,7 @@ public class HBaseTableScanner {
 
   public static void main(String[] args) throws IOException {
 
-	HBaseTableScanner m = new HBaseTableScanner();
+	HBaseTableScanner hbts = new HBaseTableScanner();
 	Options options = new Options();
 
 	Option zkQuorumOpt = new Option(null, "zkQuorum", true, "Zookeeper quorum (default: localhost)");
@@ -103,12 +103,12 @@ public class HBaseTableScanner {
 		cmd = parser.parse(options, args);
 	} catch (ParseException e) {
 		System.out.println(e.getMessage());
-		formatter.printHelp(80, m.getClass().getSimpleName(), null, options, null, true);
+		formatter.printHelp(80, hbts.getClass().getSimpleName(), null, options, null, true);
 		System.exit(1);
 	}
 
 	if ( cmd.hasOption("help") ) {
-		formatter.printHelp(80, m.getClass().getSimpleName(), null, options, null, true);
+		formatter.printHelp(80, hbts.getClass().getSimpleName(), null, options, null, true);
 		System.exit(0);
 	}
 
