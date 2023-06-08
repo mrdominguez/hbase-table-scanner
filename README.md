@@ -17,14 +17,14 @@ HBase client to list and scan tables.
     - List all tables if no argument is provided 
   - Display table names with the option to also show descriptors: `-d,--descriptors`
 - Scan:
-  - Support for row limit output: `--limit` (default: 100)
-  - Support for batch size: `-b,--batchSize`
+  - Row limit output: `--limit` (default: 100)
+  - Custom batch size: `-b,--batchSize`
   - Output cells: `-c,--cell`
 
 _TODO: Add Kerberos support_
 
 ## Custom Timeouts and Retries
-Update the following settings:
+Update the following settings found in the code:
 ```
 conf.set("hbase.cells.scanned.per.heartbeat.check", "10000");
 conf.set("hbase.client.pause", "1000");
@@ -84,7 +84,6 @@ usage: HBaseTableScanner [-b <arg>] [-c] [-d] [-h] [-l <arg>] [--limit <arg>]
 ### List `SYSTEM` tables
 ```
 $ java -cp HBaseTableScanner.jar HBaseTableScanner -zkQuorum ***** -l "SYSTEM:.*"
-
 SYSTEM:CATALOG
 SYSTEM:CHILD_LINK
 SYSTEM:FUNCTION
