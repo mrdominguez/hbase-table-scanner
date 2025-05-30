@@ -36,7 +36,7 @@ conf.set("zookeeper.session.timeout", "10000");
 ```
 
 ## Compilation and Usage
-This is the list of JAR files I used to compile and test the code:
+List of JAR files used to compile and test the code:
 ```
 commons-cli-1.3.jar
 commons-codec-1.15.jar
